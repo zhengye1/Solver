@@ -1,8 +1,9 @@
 # Solver
 Contains the code for solve some of the game
 
-- In Progress
+## In Progress
 
 
-- Done
--- Cross Sum Solver
+## Done
+- Cross Sum Solver
+- Adding ``NoSolutionException`` and display the pop up on GUI

@@ -13,7 +13,7 @@ public class CrossSumSolver {
      * @param args the formatted like following: + * 156 + - 20 + * 146 - / 2 - / 4 + + 10
      * @return
      */
-    public static Integer[] solve(String args) {
+    public static Integer[] solve(String args) throws Exception {
 
         Integer[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         ArrayList<ArrayList<Integer>> permuteList = new Permutation<Integer>().permute(nums);
@@ -66,14 +66,21 @@ public class CrossSumSolver {
 
         String ops = "+ * 30 + + 24 + * 21 + / 2 + / 11 + + 15";
 
-        Integer[] solution = solve(ops);
-        if (solution != null) {
-            for (int i = 0; i < 9; i++) {
-                System.out.print(solution[i] + " ");
-                if (i == 2 || i == 5)
-                    System.out.println();
-            }
-        } else
-            System.out.println("Not Solution");
+        Integer[] solution;
+        try {
+            solution = solve(ops);
+            if (solution != null) {
+                for (int i = 0; i < 9; i++) {
+                    System.out.print(solution[i] + " ");
+                    if (i == 2 || i == 5)
+                        System.out.println();
+                }
+            } else
+                System.out.println("Not Solution");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
     }
 }
